@@ -1,0 +1,33 @@
+services:
+  mariadb:
+    image: bitnami/mariadb:11.4.5
+    environment:
+      MARIADB_ROOT_PASSWORD: "${BB_DB_ROOT_PASSWORD}"
+      MARIADB_USER: "${BB_DB_USER}"
+      MARIADB_PASSWORD: "${BB_DB_PASSWORD}"
+      MARIADB_DATABASE: "${BB_DB_DATABASE}"
+    ports:
+      - "${BB_DB_PORT}:3306"
+    volumes:
+      - mariadb_data:/bitnami/mariadb/data
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7
+    ports:
+      - "${BB_REDIS_PORT}:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - app-network
+
+volumes:
+  mariadb_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
