@@ -1,31 +1,30 @@
 package ord.pumped.configuration
 
-import io.ktor.http.*
+import dev.nesk.akkurate.ktor.server.registerValidator
 import io.ktor.server.application.*
-import io.ktor.server.plugins.requestvalidation.RequestValidation
-import io.ktor.server.plugins.requestvalidation.RequestValidationException
-import io.ktor.server.plugins.requestvalidation.ValidationResult
+import io.ktor.server.plugins.requestvalidation.*
 import io.ktor.server.plugins.statuspages.*
 import io.ktor.server.resources.*
-import io.ktor.server.response.*
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.JsonObjectBuilder
+import ord.pumped.common.APIException
+import ord.pumped.io.websocket.auth.request.validateUpgradeWebsocketRequest
+import ord.pumped.usecase.user.rest.request.validateUpdateProfileRequest
+import ord.pumped.usecase.user.rest.request.validateUserLoginRequest
+import ord.pumped.usecase.user.rest.request.validateUserRegisterRequest
+import ord.pumped.usecase.user.rest.request.validateUserUpdatePasswordRequest
 
 fun Application.configureRouting() {
-    install(RequestValidation)
+    install(RequestValidation) {
+        registerValidator(validateUserRegisterRequest)
+        registerValidator(validateUserLoginRequest)
+        registerValidator(validateUpdateProfileRequest)
+        registerValidator(validateUserUpdatePasswordRequest)
+        registerValidator(validateUpgradeWebsocketRequest)
+    }
     install(Resources)
 
     install(StatusPages) {
-        exception<Throwable> { call, cause ->
-            call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
-        }
-        exception<RequestValidationException> { call, cause ->
-            @Serializable
-            data class ValidationError(val message: String, val errors: List<String>)
-
-            call.respond(status = HttpStatusCode.UnprocessableEntity, ValidationError("Validation failed", cause.reasons))
+        exception<APIException> { call, cause ->
+            cause.handle(call)
         }
     }
 }

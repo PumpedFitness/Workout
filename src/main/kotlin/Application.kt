@@ -5,7 +5,6 @@ import io.ktor.server.cio.*
 import io.ktor.server.engine.*
 import ord.pumped.configuration.*
 import ord.pumped.configuration.middlewares.configureMiddlewares
-import ord.pumped.io.env.configureEnv
 import ord.pumped.routes.configureRoutes
 
 fun main() {
@@ -14,17 +13,21 @@ fun main() {
 }
 
 fun Application.module(testing: Boolean = false) {
-    configureEnv()
+    configureSecrets(testing)
 
     configureDatabases(testing)
+    configureRabbitMQ()
 
+    configureKoin()
     configureHTTP()
     configureSecurity()
     configureSerialization()
     configureAdministration()
+    configureAkkurate()
     configureRouting()
     configureRoutes()
     configureMiddlewares()
+    configureWebsocket()
 
     configureOpenAPI()
     configureSwagger()
