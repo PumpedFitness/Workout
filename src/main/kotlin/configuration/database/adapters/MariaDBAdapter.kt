@@ -1,11 +1,11 @@
-package ord.pumped.configuration.database.adapters
+package org.pumped.configuration.database.adapters
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import io.ktor.server.application.Application
-import ord.pumped.configuration.database.DBAdapter
-import ord.pumped.configuration.secrets
-import ord.pumped.io.env.EnvVariables
+import org.pumped.configuration.database.DBAdapter
+import org.pumped.configuration.secrets
+import org.pumped.io.env.EnvVariables
 import javax.sql.DataSource
 
 class MariaDBAdapter: DBAdapter {

@@ -1,4 +1,4 @@
-package ord.pumped.common.security.persistance.dto
+package org.pumped.common.security.persistance.dto
 
 import org.jetbrains.exposed.dao.UUIDEntity
 import org.jetbrains.exposed.dao.UUIDEntityClass

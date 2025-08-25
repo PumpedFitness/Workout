@@ -1,4 +1,4 @@
-package ord.pumped.service
+package org.pumped.service
 
 interface IEventQueue {
 

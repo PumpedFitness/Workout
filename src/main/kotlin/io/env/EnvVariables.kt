@@ -1,4 +1,4 @@
-package ord.pumped.io.env
+package org.pumped.io.env
 
 /**
  * Register all env variables inside of this class to make sure, they are loaded correctly

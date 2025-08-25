@@ -1,4 +1,4 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.github.smiley4.ktorswaggerui.swaggerUI
 import io.ktor.server.application.Application

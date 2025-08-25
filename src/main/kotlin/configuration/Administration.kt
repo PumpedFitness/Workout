@@ -1,4 +1,4 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.github.flaxoos.ktor.server.plugins.ratelimiter.RateLimiting
 import io.github.flaxoos.ktor.server.plugins.ratelimiter.implementations.TokenBucket
@@ -6,7 +6,7 @@ import io.github.flaxoos.ktor.server.plugins.taskscheduling.TaskScheduling
 import io.github.flaxoos.ktor.server.plugins.taskscheduling.managers.lock.redis.redis
 import io.ktor.server.application.*
 import io.ktor.server.routing.*
-import ord.pumped.io.env.EnvVariables
+import org.pumped.io.env.EnvVariables
 import kotlin.time.Duration.Companion.seconds
 
 fun Application.configureAdministration() {

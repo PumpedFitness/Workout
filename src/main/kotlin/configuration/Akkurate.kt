@@ -1,4 +1,4 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import dev.nesk.akkurate.ktor.server.Akkurate
 import io.ktor.server.application.*

@@ -1,9 +1,9 @@
-package ord.pumped.common.exceptions
+package org.pumped.common.exceptions
 
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.ApplicationCall
 import io.ktor.server.response.respondText
-import ord.pumped.common.APIException
+import org.pumped.common.APIException
 
 class UnauthorizedException : APIException("Unauthorized") {
 

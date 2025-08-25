@@ -1,4 +1,4 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.ktor.server.application.*
 import org.flywaydb.core.Flyway

@@ -1,8 +1,8 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.ktor.server.application.*
-import ord.pumped.configuration.database.DatabaseAdapterFetcher
-import ord.pumped.io.env.EnvVariables
+import org.pumped.configuration.database.DatabaseAdapterFetcher
+import org.pumped.io.env.EnvVariables
 import org.jetbrains.exposed.sql.Database
 
 fun Application.configureDatabases() {

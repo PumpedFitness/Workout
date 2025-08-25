@@ -1,4 +1,4 @@
-package ord.pumped.common.security.service
+package org.pumped.common.security.service
 
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.interfaces.DecodedJWT

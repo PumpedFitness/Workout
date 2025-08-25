@@ -1,8 +1,8 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.ktor.server.application.Application
 import io.ktor.util.AttributeKey
-import ord.pumped.io.secret.SecretAdapter
+import org.pumped.io.secret.SecretAdapter
 
 fun Application.configureSecrets(testing: Boolean = false) {
     val adapterType = if (testing)

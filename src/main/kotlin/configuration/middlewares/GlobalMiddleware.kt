@@ -1,4 +1,4 @@
-package ord.pumped.configuration.middlewares
+package org.pumped.configuration.middlewares
 
 import statix.org.middlewareGroup
 

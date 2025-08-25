@@ -1,10 +1,10 @@
-package ord.pumped.io.secret
+package org.pumped.io.secret
 
-import ord.pumped.io.env.EnvAccessor
-import ord.pumped.io.env.EnvVariables
-import ord.pumped.io.secret.adapters.DotEnvAdapter
-import ord.pumped.io.secret.adapters.SystemEnvAdapter
-import ord.pumped.io.secret.adapters.VaultAdapter
+import org.pumped.io.env.EnvAccessor
+import org.pumped.io.env.EnvVariables
+import org.pumped.io.secret.adapters.DotEnvAdapter
+import org.pumped.io.secret.adapters.SystemEnvAdapter
+import org.pumped.io.secret.adapters.VaultAdapter
 
 interface SecretAdapter: EnvAccessor {
 

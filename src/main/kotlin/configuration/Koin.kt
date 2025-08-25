@@ -1,8 +1,7 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.ktor.server.application.*
-import ord.pumped.common.security.service.securityModule
-import ord.pumped.usecase.user.userModule
+import org.pumped.common.security.service.securityModule
 import org.koin.ktor.plugin.Koin
 import org.koin.logger.slf4jLogger
 

@@ -1,7 +1,7 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.ktor.server.application.*
-import ord.pumped.usecase.user.persistence.dto.UsersTable
+import org.pumped.usecase.user.persistence.dto.UsersTable
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 

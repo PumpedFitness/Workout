@@ -1,12 +1,12 @@
-package ord.pumped.common.security.service
+package org.pumped.common.security.service
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
 import com.auth0.jwt.interfaces.DecodedJWT
 import io.ktor.server.application.Application
-import ord.pumped.configuration.secrets
-import ord.pumped.io.env.EnvVariables
+import org.pumped.configuration.secrets
+import org.pumped.io.env.EnvVariables
 
 class JWTServiceAdapter: IJWTService {
 

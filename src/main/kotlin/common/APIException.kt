@@ -1,4 +1,4 @@
-package ord.pumped.common
+package org.pumped.common
 
 import io.ktor.server.application.ApplicationCall
 

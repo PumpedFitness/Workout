@@ -1,7 +1,7 @@
-package ord.pumped.common.security.service
+package org.pumped.common.security.service
 
 import io.ktor.server.application.*
-import ord.pumped.common.security.domain.model.Token
+import org.pumped.common.security.domain.model.Token
 import java.util.UUID
 
 interface ISecurityService {

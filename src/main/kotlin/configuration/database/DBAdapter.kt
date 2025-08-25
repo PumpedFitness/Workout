@@ -1,4 +1,4 @@
-package ord.pumped.configuration.database
+package org.pumped.configuration.database
 
 import io.ktor.server.application.*
 import javax.sql.DataSource

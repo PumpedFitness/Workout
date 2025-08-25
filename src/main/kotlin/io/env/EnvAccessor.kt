@@ -1,4 +1,4 @@
-package ord.pumped.io.env
+package org.pumped.io.env
 
 fun interface EnvAccessor {
 

@@ -1,4 +1,4 @@
-package ord.pumped.common.security.service
+package org.pumped.common.security.service
 
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

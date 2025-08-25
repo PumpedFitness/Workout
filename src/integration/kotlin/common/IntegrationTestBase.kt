@@ -2,10 +2,10 @@ package common
 
 import io.github.cdimascio.dotenv.dotenv
 import io.ktor.server.testing.*
-import ord.pumped.common.security.service.securityModule
-import ord.pumped.io.websocket.websocketModule
-import ord.pumped.module
-import ord.pumped.usecase.user.userModule
+import org.pumped.common.security.service.securityModule
+import org.pumped.io.websocket.websocketModule
+import org.pumped.module
+import org.pumped.usecase.user.userModule
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestInstance

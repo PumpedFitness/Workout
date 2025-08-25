@@ -1,6 +1,6 @@
-package ord.pumped.io.secret.adapters
+package org.pumped.io.secret.adapters
 
-import ord.pumped.io.secret.SecretAdapter
+import org.pumped.io.secret.SecretAdapter
 
 class SystemEnvAdapter(): SecretAdapter {
 

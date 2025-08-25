@@ -1,9 +1,9 @@
-package ord.pumped.configuration.database.adapters
+package org.pumped.configuration.database.adapters
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import io.ktor.server.application.Application
-import ord.pumped.configuration.database.DBAdapter
+import org.pumped.configuration.database.DBAdapter
 import javax.sql.DataSource
 
 class H2Adapter: DBAdapter {

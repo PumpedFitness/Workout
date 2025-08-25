@@ -1,4 +1,4 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*

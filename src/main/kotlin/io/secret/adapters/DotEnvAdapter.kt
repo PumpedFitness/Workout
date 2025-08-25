@@ -1,7 +1,7 @@
-package ord.pumped.io.secret.adapters
+package org.pumped.io.secret.adapters
 
 import io.github.cdimascio.dotenv.dotenv
-import ord.pumped.io.secret.SecretAdapter
+import org.pumped.io.secret.SecretAdapter
 
 class DotEnvAdapter(): SecretAdapter {
     private val dotenv = dotenv()

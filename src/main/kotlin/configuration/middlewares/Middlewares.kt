@@ -1,4 +1,4 @@
-package ord.pumped.configuration.middlewares
+package org.pumped.configuration.middlewares
 
 import io.ktor.server.application.*
 import statix.org.Middlewares

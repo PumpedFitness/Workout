@@ -1,4 +1,4 @@
-package ord.pumped.io.validation
+package org.pumped.io.validation
 
 import io.ktor.server.application.ApplicationCall
 import io.ktor.server.plugins.requestvalidation.RequestValidationException

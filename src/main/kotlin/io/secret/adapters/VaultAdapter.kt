@@ -1,10 +1,10 @@
-package ord.pumped.io.secret.adapters
+package org.pumped.io.secret.adapters
 
 import io.github.hansanto.kault.VaultClient
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonPrimitive
-import ord.pumped.io.secret.SecretAdapter
+import org.pumped.io.secret.SecretAdapter
 
 class VaultAdapter(): SecretAdapter {
 

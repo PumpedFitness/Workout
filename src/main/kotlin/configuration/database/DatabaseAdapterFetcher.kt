@@ -1,7 +1,7 @@
-package ord.pumped.configuration.database
+package org.pumped.configuration.database
 
-import ord.pumped.configuration.database.adapters.H2Adapter
-import ord.pumped.configuration.database.adapters.MariaDBAdapter
+import org.pumped.configuration.database.adapters.H2Adapter
+import org.pumped.configuration.database.adapters.MariaDBAdapter
 
 object DatabaseAdapterFetcher {
 

@@ -1,8 +1,8 @@
-package ord.pumped.configuration
+package org.pumped.configuration
 
 import io.github.damir.denis.tudor.ktor.server.rabbitmq.RabbitMQ
 import io.ktor.server.application.*
-import ord.pumped.io.env.EnvVariables
+import org.pumped.io.env.EnvVariables
 
 fun Application.configureRabbitMQ() {
     log.info("Connecting to RabbitMQ")

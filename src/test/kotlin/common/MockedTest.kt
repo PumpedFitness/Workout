@@ -2,7 +2,7 @@ package common
 
 import io.ktor.server.testing.ApplicationTestBuilder
 import io.ktor.server.testing.testApplication
-import ord.pumped.module
+import org.pumped.module
 
 fun test(block: suspend ApplicationTestBuilder.() -> Unit) {
     testApplication {

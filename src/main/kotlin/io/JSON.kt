@@ -1,4 +1,4 @@
-package ord.pumped.io
+package org.pumped.io
 
 import kotlinx.serialization.json.Json
 

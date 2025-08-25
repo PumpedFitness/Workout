@@ -1,4 +1,4 @@
-package ord.pumped.common.security.domain.model
+package org.pumped.common.security.domain.model
 
 import java.util.UUID
 

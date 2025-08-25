@@ -1,9 +1,9 @@
-package ord.pumped.common.security.persistance.repository
+package org.pumped.common.security.persistance.repository
 
-import ord.pumped.common.IRepository
-import ord.pumped.common.security.domain.model.Token
-import ord.pumped.common.security.persistance.dto.TokenDTO
-import ord.pumped.common.security.persistance.dto.Tokens
+import org.pumped.common.IRepository
+import org.pumped.common.security.domain.model.Token
+import org.pumped.common.security.persistance.dto.TokenDTO
+import org.pumped.common.security.persistance.dto.Tokens
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.deleteWhere
 import org.jetbrains.exposed.sql.transactions.transaction

@@ -1,12 +1,11 @@
-package ord.pumped.routes
+package org.pumped.routes
 
 import io.ktor.server.application.*
 import io.ktor.server.routing.*
-import ord.pumped.route.api.apiRouting
+import org.pumped.routes.statusRouting
 
 fun Application.configureRoutes() {
     routing {
         statusRouting()
-        apiRouting()
     }
 }

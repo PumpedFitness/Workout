@@ -1,4 +1,4 @@
-package ord.pumped.common.mapping
+package org.pumped.common.mapping
 
 interface IRouteMapper<Request, Response, Model> {
 

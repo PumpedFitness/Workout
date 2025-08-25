@@ -1,4 +1,4 @@
-package ord.pumped.util
+package org.pumped.util
 
 import java.util.UUID
 

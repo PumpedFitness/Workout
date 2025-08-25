@@ -1,4 +1,4 @@
-package ord.pumped.routes
+package org.pumped.routes
 
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
