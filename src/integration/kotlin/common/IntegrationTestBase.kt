@@ -2,16 +2,14 @@ package common
 
 import io.github.cdimascio.dotenv.dotenv
 import io.ktor.server.testing.*
-import org.pumped.common.security.service.securityModule
-import org.pumped.io.websocket.websocketModule
-import org.pumped.module
-import org.pumped.usecase.user.userModule
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestInstance
 import org.koin.core.context.GlobalContext.startKoin
 import org.koin.core.context.GlobalContext.stopKoin
 import org.koin.test.KoinTest
+import org.pumped.common.security.service.securityModule
+import org.pumped.module
 import org.testcontainers.containers.GenericContainer
 import org.testcontainers.containers.MariaDBContainer
 import org.testcontainers.utility.DockerImageName
@@ -58,7 +56,7 @@ abstract class IntegrationTestBase : KoinTest {
             )
 
             startKoin {
-                modules(userModule, securityModule, websocketModule)
+                modules(securityModule)
             }
         }
 
