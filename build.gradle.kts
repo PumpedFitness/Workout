@@ -19,6 +19,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "2.2.0"
     id("org.flywaydb.flyway") version "11.11.2"
     id("com.google.devtools.ksp") version "2.1.21-2.0.2"
+    id("org.jetbrains.dokka") version "2.0.0"
+    `maven-publish`
 }
 
 repositories {
@@ -38,6 +40,10 @@ application {
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
+}
+
+subprojects {
+    apply(plugin = "org.jetbrains.dokka")
 }
 
 repositories {
@@ -105,7 +111,9 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-dao:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-kotlin-datetime:$exposed_version")
+
     implementation("com.zaxxer:HikariCP:7.0.2")
+
     implementation("org.mariadb.jdbc:mariadb-java-client:3.5.4")
 
     implementation("io.github.cdimascio:dotenv-kotlin:6.5.1")
@@ -181,7 +189,6 @@ tasks.named("check") {
     dependsOn("integrationTest")
 }
 
-// For unit tests
 tasks.named<Test>("test") {
     testLogging {
         events("passed", "skipped", "failed")
