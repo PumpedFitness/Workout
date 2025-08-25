@@ -1,4 +1,4 @@
-package org.pumped.common.exceptions
+package org.pumped.exceptions
 
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.ApplicationCall

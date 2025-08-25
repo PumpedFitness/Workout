@@ -1,4 +1,4 @@
-package org.pumped.common.mapping
+package org.pumped.mapping
 
 fun interface IModelMapper<Model, DTO> {
 
