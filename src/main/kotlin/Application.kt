@@ -19,15 +19,13 @@ fun Application.module(testing: Boolean = false) {
     configureRabbitMQ()
 
     configureKoin()
-    configureHTTP()
-    configureSecurity()
+
     configureSerialization()
     configureAdministration()
     configureAkkurate()
     configureRouting()
     configureRoutes()
     configureMiddlewares()
-    configureWebsocket()
 
     configureOpenAPI()
     configureSwagger()

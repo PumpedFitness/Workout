@@ -8,6 +8,4 @@ import io.ktor.server.application.*
  */
 fun Application.configureAkkurate() {
     install(Akkurate)
-
-
 }
