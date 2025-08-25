@@ -1,5 +1,8 @@
 name: deploy-dokka.yml
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:
@@ -37,7 +40,7 @@ jobs:
           name: workout-docs
           path: public/
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           keep_files: true
