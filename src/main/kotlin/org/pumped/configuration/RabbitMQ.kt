@@ -1,15 +1,43 @@
 package org.pumped.configuration
 
 import io.github.damir.denis.tudor.ktor.server.rabbitmq.RabbitMQ
+import io.github.damir.denis.tudor.ktor.server.rabbitmq.dsl.*
 import io.ktor.server.application.*
 import org.pumped.io.env.EnvVariables
 
-fun Application.configureRabbitMQ() {
+fun Application.configureRabbitMQ(name: String) {
     log.info("Connecting to RabbitMQ")
     install(RabbitMQ) {
         uri = "amqp://${secrets[EnvVariables.BB_RABBITMQ_USER]}:${secrets[EnvVariables.BB_RABBITMQ_PASSWORD]}@${secrets[EnvVariables.BB_RABBITMQ_HOST]}:${secrets[EnvVariables.BB_RABBITMQ_PORT]}"
         defaultConnectionName = "default-connection"
         dispatcherThreadPollSize = 4
         tlsEnabled = false
+    }
+
+    val queueName = "$name-queue"
+    val exchangeKey = "$name-exchange"
+    val routingKey = "$name-routing"
+
+    rabbitmq {
+        queueBind {
+            queue = queueName
+            exchange = exchangeKey
+            this.routingKey = routingKey
+            queueDeclare {
+                queue = queueName
+                durable = true
+            }
+            exchangeDeclare {
+                exchange = exchangeKey
+                type = "direct"
+            }
+        }
+        basicConsume {
+            queue = queueName
+            deliverCallback<String> {
+
+                basicAck {  }
+            }
+        }
     }
 }

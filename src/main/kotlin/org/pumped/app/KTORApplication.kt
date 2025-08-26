@@ -4,13 +4,11 @@ import io.ktor.server.application.Application
 import org.pumped.configuration.*
 import org.pumped.routes.configureRoutes
 
-fun Application.module(testing: Boolean = false) {
-    configureSecrets(testing)
+fun Application.module(name: String) {
+    configureSecrets()
 
     configureDatabases()
-    configureRabbitMQ()
-
-    configureKoin()
+    configureRabbitMQ(name)
 
     configureSerialization()
     configureAdministration()

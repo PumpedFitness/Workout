@@ -3,6 +3,8 @@ package org.pumped.app
 import io.ktor.server.application.Application
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
+import io.ktor.util.logging.Logger
+import org.slf4j.LoggerFactory
 
 /**
  * MiniService is an abstract base class for creating Ktor-based services.
@@ -28,11 +30,14 @@ import io.ktor.server.engine.*
  * module configuration. You can use it to perform additional initialization steps,
  * register routes, or configure service-specific components.
  */
-abstract class MiniService {
+abstract class MiniService(name: String) {
+
+    lateinit var logger: Logger
 
     init {
         embeddedServer(CIO, port = 8080, host = "0.0.0.0") {
-            module()
+            module(name)
+            logger = LoggerFactory.getLogger(name)
             onBoot()
         }.start(wait = true).addShutdownHook(::onShutdown)
     }

@@ -14,12 +14,15 @@ val test_container_version: String by project
 val ktor_server_tests_version: String by project
 
 plugins {
-    kotlin("jvm") version "2.2.0"
+    kotlin("jvm") version "2.2.10"
     id("io.ktor.plugin") version "3.2.3"
     id("org.jetbrains.kotlin.plugin.serialization") version "2.2.0"
     id("org.flywaydb.flyway") version "11.11.2"
-    id("com.google.devtools.ksp") version "2.1.21-2.0.2"
+    id("com.google.devtools.ksp") version "2.2.10-2.0.2"
     id("org.jetbrains.dokka") version "2.0.0"
+    id("com.github.ben-manes.versions") version "0.51.0"
+    id("org.owasp.dependencycheck") version "12.1.3"
+
     `maven-publish`
 }
 
@@ -36,15 +39,10 @@ group = "org.pumped"
 version = "1.0.0"
 
 application {
-    mainClass = "ApplicationKt"
-
-    val isDevelopment: Boolean = project.ext.has("development")
-    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
+    // trick shadow jar
+    mainClass.set("...")
 }
 
-subprojects {
-    apply(plugin = "org.jetbrains.dokka")
-}
 
 repositories {
     mavenCentral()
@@ -131,10 +129,6 @@ dependencies {
     implementation("io.github.smiley4:ktor-swagger-ui:5.2.0")
 
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("com.github.StaticFX:ktor-middleware:v1.1.1")
-
-    implementation("io.insert-koin:koin-ktor:$koin_version")
-    implementation("io.insert-koin:koin-logger-slf4j:$koin_version")
 
     implementation("dev.nesk.akkurate:akkurate-ktor-server:$akkurate_version")
     implementation("dev.nesk.akkurate:akkurate-core:$akkurate_version")
@@ -145,15 +139,12 @@ dependencies {
     implementation("io.github.damirdenis-tudor:ktor-server-rabbitmq:1.3.6")
     ksp("dev.nesk.akkurate:akkurate-ksp-plugin:0.11.0")
 
-    implementation("at.favre.lib:bcrypt:0.10.2")
-
     testImplementation("io.ktor:ktor-server-test-host")
     testImplementation("com.h2database:h2:${h2_version}")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
     testImplementation("io.mockk:mockk:1.14.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:$jupiter_version")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$jupiter_version")
-    testImplementation("io.insert-koin:koin-test:$koin_version")
     testImplementation("org.testcontainers:testcontainers:$test_container_version")
     testImplementation("org.testcontainers:mariadb:$test_container_version")
     testImplementation("io.ktor:ktor-server-tests:$ktor_server_tests_version")
@@ -170,6 +161,7 @@ tasks.withType<Test> {
 
     }
 }
+
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.compilerOptions {
     freeCompilerArgs.set(listOf("-XXLanguage:+BreakContinueInInlineLambdas"))
@@ -211,11 +203,33 @@ tasks.named<Test>("integrationTest") {
     }
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+
 jib {
     from {
         image = "eclipse-temurin:21-jdk"
     }
     to {
         image = System.getenv("DOCKER_IMAGE")
+    }
+}
+
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+
+            groupId = project.group.toString()
+            artifactId = "miniservice-app"
+            version = project.version.toString()
+        }
+    }
+    repositories {
+        mavenLocal()
     }
 }
