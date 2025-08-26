@@ -2,34 +2,28 @@ package org.pumped.io.env
 
 /**
  * Register all env variables inside of this class to make sure, they are loaded correctly
- */
+ */ 
 enum class EnvVariables(
-    val type: EnvType,
-    val default: String? = null,
-    val requiresNonEmpty: Boolean = true,
-) {
-    BB_MODE(EnvType.STRING, "DEV"),
+    override val type: EnvType,
+    override val default: String? = null,
+    override val requiresNonEmpty: Boolean = true,
+) : EnvVariable {
+    MODE(EnvType.STRING, "DEV"),
 
-    BB_DB_TYPE(EnvType.STRING),
-    BB_DB_HOST(EnvType.STRING),
-    BB_DB_PORT(EnvType.INT),
-    BB_DB_DATABASE(EnvType.STRING),
-    BB_DB_USER(EnvType.STRING),
-    BB_DB_PASSWORD(EnvType.STRING),
+    DB_TYPE(EnvType.STRING),
+    DB_HOST(EnvType.STRING),
+    DB_PORT(EnvType.INT),
+    DB_DATABASE(EnvType.STRING),
+    DB_USER(EnvType.STRING),
+    DB_PASSWORD(EnvType.STRING),
 
-    BB_REDIS_HOST(EnvType.STRING),
-    BB_REDIS_PORT(EnvType.STRING),
+    REDIS_HOST(EnvType.STRING),
+    REDIS_PORT(EnvType.STRING),
 
-    BB_JWT_SECRET(EnvType.STRING),
-    BB_JWT_AUDIENCE(EnvType.STRING),
-    BB_JWT_REALM(EnvType.STRING),
-    BB_JWT_DOMAIN(EnvType.STRING),
-    BB_JWT_EXPIRY(EnvType.NUMBER),
-
-    BB_RABBITMQ_USER(EnvType.STRING),
-    BB_RABBITMQ_PASSWORD(EnvType.STRING),
-    BB_RABBITMQ_PORT(EnvType.NUMBER),
-    BB_RABBITMQ_HOST(EnvType.STRING),
+    RABBITMQ_USER(EnvType.STRING),
+    RABBITMQ_PASSWORD(EnvType.STRING),
+    RABBITMQ_PORT(EnvType.NUMBER),
+    RABBITMQ_HOST(EnvType.STRING),
 }
 
 enum class EnvType(val cast: (value: String) -> Boolean) {

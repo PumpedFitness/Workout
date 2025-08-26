@@ -14,9 +14,9 @@ class MariaDBAdapter: DBAdapter {
         val secrets = application.secrets
 
         val config = HikariConfig().apply {
-            username = secrets[EnvVariables.BB_DB_USER]
-            password = secrets[EnvVariables.BB_DB_PASSWORD]
-            jdbcUrl = "jdbc:mariadb://${secrets[EnvVariables.BB_DB_HOST]}:${secrets[EnvVariables.BB_DB_PORT]}/${secrets[EnvVariables.BB_DB_DATABASE]}"
+            username = secrets[EnvVariables.DB_USER]
+            password = secrets[EnvVariables.DB_PASSWORD]
+            jdbcUrl = "jdbc:mariadb://${secrets[EnvVariables.DB_HOST]}:${secrets[EnvVariables.DB_PORT]}/${secrets[EnvVariables.DB_DATABASE]}"
         }
 
         return HikariDataSource(config)

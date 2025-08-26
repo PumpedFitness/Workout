@@ -30,14 +30,14 @@ import org.slf4j.LoggerFactory
  * module configuration. You can use it to perform additional initialization steps,
  * register routes, or configure service-specific components.
  */
-abstract class MiniService(name: String) {
+abstract class MiniService(config: MiniServiceConfig) {
 
     lateinit var logger: Logger
 
     init {
         embeddedServer(CIO, port = 8080, host = "0.0.0.0") {
-            module(name)
-            logger = LoggerFactory.getLogger(name)
+            module(config)
+            logger = LoggerFactory.getLogger(config.name)
             onBoot()
         }.start(wait = true).addShutdownHook(::onShutdown)
     }

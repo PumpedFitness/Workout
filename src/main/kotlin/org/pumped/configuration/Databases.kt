@@ -8,7 +8,7 @@ import org.jetbrains.exposed.sql.Database
 fun Application.configureDatabases() {
     log.info("Initializing database...")
 
-    val adapter = DatabaseAdapterFetcher.fetchAdapterForDB(secrets[EnvVariables.BB_DB_TYPE])
+    val adapter = DatabaseAdapterFetcher.fetchAdapterForDB(secrets[EnvVariables.DB_TYPE])
 
     val datasource = adapter.asDataSource(this)
 

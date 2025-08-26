@@ -24,8 +24,8 @@ fun Application.configureAdministration() {
     install(TaskScheduling) {
         redis {
             connectionPoolInitialSize = 1
-            host = secrets[EnvVariables.BB_REDIS_HOST]
-            port = secrets[EnvVariables.BB_REDIS_PORT].toInt()
+            host = secrets[EnvVariables.REDIS_HOST]
+            port = secrets[EnvVariables.REDIS_PORT].toInt()
             connectionAcquisitionTimeoutMs = 1_000
             lockExpirationMs = 60_000
         }

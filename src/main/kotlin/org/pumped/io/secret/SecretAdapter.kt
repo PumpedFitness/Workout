@@ -1,35 +1,43 @@
 package org.pumped.io.secret
 
 import org.pumped.io.env.EnvAccessor
+import org.pumped.io.env.EnvVariable
 import org.pumped.io.env.EnvVariables
 import org.pumped.io.secret.adapters.DotEnvAdapter
 import org.pumped.io.secret.adapters.SystemEnvAdapter
 import org.pumped.io.secret.adapters.VaultAdapter
 
-interface SecretAdapter: EnvAccessor {
+abstract class SecretAdapter(val prefix: String = ""): EnvAccessor {
 
     companion object {
-        fun getSecretAdapter(type: String): SecretAdapter {
+        fun getSecretAdapter(type: String, prefix: String = ""): SecretAdapter {
             return when (type) {
-                "env" -> DotEnvAdapter()
-                "system" -> SystemEnvAdapter()
-                "vault" -> VaultAdapter()
+                "env" -> DotEnvAdapter(prefix)
+                "system" -> SystemEnvAdapter(prefix)
+                "vault" -> VaultAdapter(prefix)
                 else -> error("Unsupported type: $type")
             }
         }
     }
 
-    fun get(key: String): String?
+    abstract fun get(key: String): String?
 
-    override operator fun get(variable: EnvVariables) = get(variable.name)!!
+    override operator fun get(variable: EnvVariable) = get(variable.name)!!
 
-    fun getAllKeys(): Set<String>
+    abstract fun getAllKeys(): Set<String>
 
-    fun getAll(): Map<String, String>
+    abstract fun getAll(): Map<String, String>
 
-    fun validate(): Boolean {
+    /**
+     * Validates that all required environment variables are present and of the correct type.
+     * By default, validates against the EnvVariables enum.
+     * 
+     * @param envVariables the collection of environment variables to validate against
+     * @return true if all variables are valid
+     * @throws IllegalStateException if any variable is invalid
+     */
+    fun validate(envVariables: Collection<EnvVariable> = EnvVariables.entries): Boolean {
         val keys = getAllKeys()
-        val envVariables = EnvVariables.entries
 
         for (envVariable in envVariables) {
             if (!keys.contains(envVariable.name)) {

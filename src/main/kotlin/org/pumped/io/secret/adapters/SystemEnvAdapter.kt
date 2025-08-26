@@ -2,10 +2,10 @@ package org.pumped.io.secret.adapters
 
 import org.pumped.io.secret.SecretAdapter
 
-class SystemEnvAdapter(): SecretAdapter {
+class SystemEnvAdapter(prefix: String): SecretAdapter(prefix) {
 
     override fun get(key: String): String? {
-        return System.getProperty(key) ?: null
+        return System.getProperty("${prefix}_$key")
     }
 
     override fun getAllKeys(): Set<String> {

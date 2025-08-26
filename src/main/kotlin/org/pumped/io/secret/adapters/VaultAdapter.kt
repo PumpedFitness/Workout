@@ -6,16 +6,16 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonPrimitive
 import org.pumped.io.secret.SecretAdapter
 
-class VaultAdapter(): SecretAdapter {
+class VaultAdapter(prefix: String): SecretAdapter(prefix) {
 
     private val vault = VaultClient {
-        url = System.getenv("BB_VAULT_HOST") ?: "http://localhost:8200"
+        url = System.getenv("${prefix}_VAULT_HOST") ?: "http://localhost:8200"
         auth {
-            setTokenString(System.getenv("BB_VAULT_TOKEN") ?: error("Vault token is not defined"))
+            setTokenString(System.getenv("${prefix}_VAULT_TOKEN") ?: error("Vault token is not defined"))
         }
     }
 
-    private val path = System.getenv("BB_VAULT_PATH")
+    private val path = System.getenv("${prefix}_VAULT_PATH")
     private val kv2 = vault.secret.kv2
 
     private val secrets: Map<String, JsonElement> = runBlocking {
@@ -23,7 +23,7 @@ class VaultAdapter(): SecretAdapter {
     }
 
     override fun get(key: String): String? {
-        return secrets[key]?.jsonPrimitive?.content
+        return secrets["${prefix}_$key"]?.jsonPrimitive?.content
     }
 
     override fun getAllKeys(): Set<String> {

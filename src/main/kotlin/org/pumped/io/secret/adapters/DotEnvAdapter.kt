@@ -3,12 +3,12 @@ package org.pumped.io.secret.adapters
 import io.github.cdimascio.dotenv.dotenv
 import org.pumped.io.secret.SecretAdapter
 
-class DotEnvAdapter(): SecretAdapter {
+class DotEnvAdapter(prefix: String): SecretAdapter(prefix) {
     private val dotenv = dotenv()
 
     override fun get(key: String): String? {
         if (!dotenv.entries().any { it.key == key }) return null
-        return dotenv[key]
+        return dotenv["${prefix}_$key"]
     }
 
     override fun getAllKeys(): Set<String> {
