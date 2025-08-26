@@ -1,72 +1,210 @@
-# ktor-starter
+# Workout API
 
-Simple start kit including the following features: 
+A Kotlin-based API framework for building workout and fitness applications. This framework provides a solid foundation with user management, authentication, and infrastructure setup, allowing you to focus on building your specific workout application features.
 
-- API route and versioning
-- JSON serialization
-- Basic JWT Auth
-- Basic MariaDB/Redis setup with docker compose
-- Migration support through flyway and gradle
-- SwaggerUI for documentation
-- Testing Infrastructure
-- Environment based env loading (.env or system env)
-- Middlewares
-- API Request Validation
+## Overview
 
+Workout API is built on the KTOR framework and provides:
 
-To get started: 
+- User management with JWT authentication
+- Database integration with MariaDB and migrations
+- Caching with Redis
+- Messaging with RabbitMQ
+- API documentation with OpenAPI and Swagger
+- Comprehensive testing infrastructure
+- Docker-based deployment
 
-copy .env.template to .env and start ktor application
+## Getting Started
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
+### Prerequisites
 
-Here are some useful links to get you started:
+- JDK 21 or higher
+- Docker and Docker Compose (for running infrastructure services)
+- Gradle (included as wrapper)
 
-- [Ktor Documentation](https://ktor.io/docs/home.html)
-- [Ktor GitHub page](https://github.com/ktorio/ktor)
-- The [Ktor Slack chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9). You'll need
-  to [request an invite](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up) to join.
+### Installation
 
-## Features
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/Workout.git
+   cd Workout
+   ```
 
-Here's a list of features included in this project:
+2. Copy the environment template:
+   ```bash
+   cp .env.template .env
+   ```
 
-| Name                                                                   | Description                                                                        |
-|------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [CORS](https://start.ktor.io/p/cors)                                   | Enables Cross-Origin Resource Sharing (CORS)                                       |
-| [Default Headers](https://start.ktor.io/p/default-headers)             | Adds a default set of headers to HTTP responses                                    |
-| [Routing](https://start.ktor.io/p/routing)                             | Provides a structured routing DSL                                                  |
-| [Simple Cache](https://start.ktor.io/p/simple-cache)                   | Provides API for cache management                                                  |
-| [Simple Redis Cache](https://start.ktor.io/p/simple-redis-cache)       | Provides Redis cache for Simple Cache plugin                                       |
-| [Swagger](https://start.ktor.io/p/swagger)                             | Serves Swagger UI for your project                                                 |
-| [Authentication](https://start.ktor.io/p/auth)                         | Provides extension point for handling the Authorization header                     |
-| [Authentication JWT](https://start.ktor.io/p/auth-jwt)                 | Handles JSON Web Token (JWT) bearer authentication scheme                          |
-| [Request Validation](https://start.ktor.io/p/request-validation)       | Adds validation for incoming requests                                              |
-| [Resources](https://start.ktor.io/p/resources)                         | Provides type-safe routing                                                         |
-| [Status Pages](https://start.ktor.io/p/status-pages)                   | Provides exception handling for route                                              |
-| [Content Negotiation](https://start.ktor.io/p/content-negotiation)     | Provides automatic content conversion according to Content-Type and Accept headers |
-| [kotlinx.serialization](https://start.ktor.io/p/kotlinx-serialization) | Handles JSON serialization using kotlinx.serialization library                     |
-| [Exposed](https://start.ktor.io/p/exposed)                             | Adds Exposed database to your application                                          |
-| [Rate Limiting](https://start.ktor.io/p/ktor-server-rate-limiting)     | Manage request rate limiting as you see fit                                        |
+3. Edit the `.env` file with your configuration values:
+   ```
+   # Database
+   BB_DB_ROOT_PASSWORD=your_root_password
+   BB_DB_USER=your_db_user
+   BB_DB_PASSWORD=your_db_password
+   BB_DB_DATABASE=workout
+   BB_DB_PORT=3306
+   
+   # Redis
+   BB_REDIS_PORT=6379
+   
+   # RabbitMQ
+   BB_RABBITMQ_USER=your_rabbitmq_user
+   BB_RABBITMQ_PASSWORD=your_rabbitmq_password
+   BB_RABBITMQ_PORT=5672
+   BB_RABBITMQ_HTTP_PORT=15672
+   ```
 
-## Building & Running
+4. Start the infrastructure services:
+   ```bash
+   docker-compose up -d
+   ```
 
-To build or run the project, use one of the following tasks:
+5. Run the application:
+   ```bash
+   ./gradlew run
+   ```
 
-| Task                          | Description                                                          |
-| -------------------------------|---------------------------------------------------------------------- |
-| `./gradlew test`              | Run the tests                                                        |
-| `./gradlew build`             | Build everything                                                     |
-| `buildFatJar`                 | Build an executable JAR of the server with all dependencies included |
-| `buildImage`                  | Build the docker image to use with the fat JAR                       |
-| `publishImageToLocalRegistry` | Publish the docker image locally                                     |
-| `run`                         | Run the server                                                       |
-| `runDocker`                   | Run using the local docker image                                     |
+The application will start on http://localhost:8080.
 
-If the server starts successfully, you'll see the following output:
+## API Endpoints
 
+### Status Endpoint
+
+- **GET /status**: Returns "OK" if the service is running
+  ```bash
+  curl http://localhost:8080/status
+  ```
+
+### Adding Custom Endpoints
+
+To add your own endpoints, create a new route file in the `org.pumped.route` package:
+
+```kotlin
+fun Route.yourCustomRouting() {
+    get("/your-endpoint") {
+        call.respondText("Your response")
+    }
+    
+    post("/your-post-endpoint") {
+        // Handle POST request
+    }
+}
 ```
-2024-12-04 14:32:45.584 [main] INFO  Application - Application started in 0.303 seconds.
-2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
+
+Then register your routes in the `Router.kt` file:
+
+```kotlin
+fun Application.configureRoutes() {
+    routing {
+        statusRouting()
+        yourCustomRouting() // Add your custom routes
+    }
+}
 ```
 
+## Creating a Service
+
+To create a new service using this framework, extend the `MiniService` class:
+
+```kotlin
+class MyWorkoutService : MiniService("my-workout-service") {
+    override fun Application.onBoot() {
+        // Perform service-specific initialization here
+    }
+    
+    override fun onShutdown() {
+        // Cleanup resources when the service shuts down
+    }
+}
+
+fun main() {
+    MyWorkoutService() // This will start the server
+}
+```
+
+## Database Migrations
+
+The project uses Flyway for database migrations. Migration files are located in `src/main/resources/db/migration`.
+
+To create a new migration:
+
+1. Create a new SQL file in the migrations directory with the naming convention `V{timestamp}__{description}.sql`
+2. Write your SQL migration
+3. Run the migration with:
+   ```bash
+   ./gradlew flywayMigrate
+   ```
+
+## Configuration
+
+### Environment Variables
+
+The application uses environment variables for configuration. These can be provided in a `.env` file or as system environment variables.
+
+Key environment variables:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| BB_DB_HOST | Database host | localhost |
+| BB_DB_PORT | Database port | 3306 |
+| BB_DB_USER | Database user | |
+| BB_DB_PASSWORD | Database password | |
+| BB_DB_DATABASE | Database name | workout |
+| BB_REDIS_HOST | Redis host | localhost |
+| BB_REDIS_PORT | Redis port | 6379 |
+| BB_RABBITMQ_HOST | RabbitMQ host | localhost |
+| BB_RABBITMQ_PORT | RabbitMQ port | 5672 |
+| BB_RABBITMQ_USER | RabbitMQ user | |
+| BB_RABBITMQ_PASSWORD | RabbitMQ password | |
+
+## Testing
+
+The project includes support for unit tests and integration tests.
+
+To run unit tests:
+```bash
+./gradlew test
+```
+
+To run integration tests:
+```bash
+./gradlew integrationTest
+```
+
+## Building and Deployment
+
+### Building a JAR
+
+```bash
+./gradlew buildFatJar
+```
+
+The JAR will be created in `build/libs/`.
+
+### Building a Docker Image
+
+```bash
+export DOCKER_IMAGE=your-image-name:tag
+./gradlew jib
+```
+
+### Running with Docker
+
+```bash
+docker run -p 8080:8080 your-image-name:tag
+```
+
+## Documentation
+
+API documentation is available via Swagger UI at http://localhost:8080/swagger when the application is running.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
