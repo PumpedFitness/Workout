@@ -225,7 +225,7 @@ publishing {
             from(components["java"])
 
             groupId = project.group.toString()
-            artifactId = "miniservice-app"
+            artifactId = "workout"
             version = project.version.toString()
         }
     }
