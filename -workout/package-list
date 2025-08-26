@@ -1,0 +1,152 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:io.validation////PointingToDeclaration/-workout/io.validation/index.html
+$dokka.location:io.validation/APIRequest///PointingToDeclaration/-workout/io.validation/-a-p-i-request/index.html
+$dokka.location:io.validation/APIRequest/validate/#/PointingToDeclaration/-workout/io.validation/-a-p-i-request/validate.html
+$dokka.location:org.pumped.app////PointingToDeclaration/-workout/org.pumped.app/index.html
+$dokka.location:org.pumped.app//module/io.ktor.server.application.Application#kotlin.String/PointingToDeclaration/-workout/org.pumped.app/module.html
+$dokka.location:org.pumped.app/MiniService///PointingToDeclaration/-workout/org.pumped.app/-mini-service/index.html
+$dokka.location:org.pumped.app/MiniService/MiniService/#kotlin.String/PointingToDeclaration/-workout/org.pumped.app/-mini-service/-mini-service.html
+$dokka.location:org.pumped.app/MiniService/logger/#/PointingToDeclaration/-workout/org.pumped.app/-mini-service/logger.html
+$dokka.location:org.pumped.app/MiniService/onBoot/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.app/-mini-service/on-boot.html
+$dokka.location:org.pumped.app/MiniService/onShutdown/#/PointingToDeclaration/-workout/org.pumped.app/-mini-service/on-shutdown.html
+$dokka.location:org.pumped.common////PointingToDeclaration/-workout/org.pumped.common/index.html
+$dokka.location:org.pumped.common/APIException///PointingToDeclaration/-workout/org.pumped.common/-a-p-i-exception/index.html
+$dokka.location:org.pumped.common/APIException/APIException/#kotlin.String/PointingToDeclaration/-workout/org.pumped.common/-a-p-i-exception/-a-p-i-exception.html
+$dokka.location:org.pumped.common/APIException/handle/#io.ktor.server.application.ApplicationCall/PointingToDeclaration/-workout/org.pumped.common/-a-p-i-exception/handle.html
+$dokka.location:org.pumped.common/IRepository///PointingToDeclaration/-workout/org.pumped.common/-i-repository/index.html
+$dokka.location:org.pumped.common/IRepository/delete/#java.util.UUID/PointingToDeclaration/-workout/org.pumped.common/-i-repository/delete.html
+$dokka.location:org.pumped.common/IRepository/findByID/#java.util.UUID/PointingToDeclaration/-workout/org.pumped.common/-i-repository/find-by-i-d.html
+$dokka.location:org.pumped.common/IRepository/save/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-workout/org.pumped.common/-i-repository/save.html
+$dokka.location:org.pumped.common/IRepository/update/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-workout/org.pumped.common/-i-repository/update.html
+$dokka.location:org.pumped.configuration.database.adapters////PointingToDeclaration/-workout/org.pumped.configuration.database.adapters/index.html
+$dokka.location:org.pumped.configuration.database.adapters/H2Adapter///PointingToDeclaration/-workout/org.pumped.configuration.database.adapters/-h2-adapter/index.html
+$dokka.location:org.pumped.configuration.database.adapters/H2Adapter/H2Adapter/#/PointingToDeclaration/-workout/org.pumped.configuration.database.adapters/-h2-adapter/-h2-adapter.html
+$dokka.location:org.pumped.configuration.database.adapters/H2Adapter/asDataSource/#io.ktor.server.application.Application/PointingToDeclaration/-workout/org.pumped.configuration.database.adapters/-h2-adapter/as-data-source.html
+$dokka.location:org.pumped.configuration.database.adapters/MariaDBAdapter///PointingToDeclaration/-workout/org.pumped.configuration.database.adapters/-maria-d-b-adapter/index.html
+$dokka.location:org.pumped.configuration.database.adapters/MariaDBAdapter/MariaDBAdapter/#/PointingToDeclaration/-workout/org.pumped.configuration.database.adapters/-maria-d-b-adapter/-maria-d-b-adapter.html
+$dokka.location:org.pumped.configuration.database.adapters/MariaDBAdapter/asDataSource/#io.ktor.server.application.Application/PointingToDeclaration/-workout/org.pumped.configuration.database.adapters/-maria-d-b-adapter/as-data-source.html
+$dokka.location:org.pumped.configuration.database////PointingToDeclaration/-workout/org.pumped.configuration.database/index.html
+$dokka.location:org.pumped.configuration.database/DBAdapter///PointingToDeclaration/-workout/org.pumped.configuration.database/-d-b-adapter/index.html
+$dokka.location:org.pumped.configuration.database/DBAdapter/asDataSource/#io.ktor.server.application.Application/PointingToDeclaration/-workout/org.pumped.configuration.database/-d-b-adapter/as-data-source.html
+$dokka.location:org.pumped.configuration.database/DatabaseAdapterFetcher///PointingToDeclaration/-workout/org.pumped.configuration.database/-database-adapter-fetcher/index.html
+$dokka.location:org.pumped.configuration.database/DatabaseAdapterFetcher/fetchAdapterForDB/#kotlin.String/PointingToDeclaration/-workout/org.pumped.configuration.database/-database-adapter-fetcher/fetch-adapter-for-d-b.html
+$dokka.location:org.pumped.configuration////PointingToDeclaration/-workout/org.pumped.configuration/index.html
+$dokka.location:org.pumped.configuration//BBSecretAccessor/#/PointingToDeclaration/-workout/org.pumped.configuration/-b-b-secret-accessor.html
+$dokka.location:org.pumped.configuration//configureAdministration/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/configure-administration.html
+$dokka.location:org.pumped.configuration//configureAkkurate/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/configure-akkurate.html
+$dokka.location:org.pumped.configuration//configureDatabases/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/configure-databases.html
+$dokka.location:org.pumped.configuration//configureMigrations/io.ktor.server.application.Application#javax.sql.DataSource/PointingToDeclaration/-workout/org.pumped.configuration/configure-migrations.html
+$dokka.location:org.pumped.configuration//configureOpenAPI/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/configure-open-a-p-i.html
+$dokka.location:org.pumped.configuration//configureRabbitMQ/io.ktor.server.application.Application#kotlin.String/PointingToDeclaration/-workout/org.pumped.configuration/configure-rabbit-m-q.html
+$dokka.location:org.pumped.configuration//configureRouting/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/configure-routing.html
+$dokka.location:org.pumped.configuration//configureSecrets/io.ktor.server.application.Application#kotlin.Boolean/PointingToDeclaration/-workout/org.pumped.configuration/configure-secrets.html
+$dokka.location:org.pumped.configuration//configureSerialization/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/configure-serialization.html
+$dokka.location:org.pumped.configuration//configureSwagger/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/configure-swagger.html
+$dokka.location:org.pumped.configuration//pingDatabase/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/ping-database.html
+$dokka.location:org.pumped.configuration//secrets/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.configuration/secrets.html
+$dokka.location:org.pumped.exceptions////PointingToDeclaration/-workout/org.pumped.exceptions/index.html
+$dokka.location:org.pumped.exceptions/UnauthorizedException///PointingToDeclaration/-workout/org.pumped.exceptions/-unauthorized-exception/index.html
+$dokka.location:org.pumped.exceptions/UnauthorizedException/UnauthorizedException/#/PointingToDeclaration/-workout/org.pumped.exceptions/-unauthorized-exception/-unauthorized-exception.html
+$dokka.location:org.pumped.exceptions/UnauthorizedException/handle/#io.ktor.server.application.ApplicationCall/PointingToDeclaration/-workout/org.pumped.exceptions/-unauthorized-exception/handle.html
+$dokka.location:org.pumped.io.env////PointingToDeclaration/-workout/org.pumped.io.env/index.html
+$dokka.location:org.pumped.io.env/EnvAccessor///PointingToDeclaration/-workout/org.pumped.io.env/-env-accessor/index.html
+$dokka.location:org.pumped.io.env/EnvAccessor/get/#org.pumped.io.env.EnvVariables/PointingToDeclaration/-workout/org.pumped.io.env/-env-accessor/get.html
+$dokka.location:org.pumped.io.env/EnvType.BOOLEAN///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-type/-b-o-o-l-e-a-n/index.html
+$dokka.location:org.pumped.io.env/EnvType.INT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-type/-i-n-t/index.html
+$dokka.location:org.pumped.io.env/EnvType.LONG///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-type/-l-o-n-g/index.html
+$dokka.location:org.pumped.io.env/EnvType.NUMBER///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-type/-n-u-m-b-e-r/index.html
+$dokka.location:org.pumped.io.env/EnvType.STRING///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-type/-s-t-r-i-n-g/index.html
+$dokka.location:org.pumped.io.env/EnvType///PointingToDeclaration/-workout/org.pumped.io.env/-env-type/index.html
+$dokka.location:org.pumped.io.env/EnvType/cast/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-type/cast.html
+$dokka.location:org.pumped.io.env/EnvType/entries/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-type/entries.html
+$dokka.location:org.pumped.io.env/EnvType/valueOf/#kotlin.String/PointingToDeclaration/-workout/org.pumped.io.env/-env-type/value-of.html
+$dokka.location:org.pumped.io.env/EnvType/values/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-type/values.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_DB_DATABASE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-d-b_-d-a-t-a-b-a-s-e/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_DB_HOST///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-d-b_-h-o-s-t/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_DB_PASSWORD///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-d-b_-p-a-s-s-w-o-r-d/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_DB_PORT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-d-b_-p-o-r-t/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_DB_TYPE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-d-b_-t-y-p-e/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_DB_USER///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-d-b_-u-s-e-r/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_JWT_AUDIENCE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-j-w-t_-a-u-d-i-e-n-c-e/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_JWT_DOMAIN///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-j-w-t_-d-o-m-a-i-n/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_JWT_EXPIRY///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-j-w-t_-e-x-p-i-r-y/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_JWT_REALM///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-j-w-t_-r-e-a-l-m/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_JWT_SECRET///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-j-w-t_-s-e-c-r-e-t/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_MODE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-m-o-d-e/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_RABBITMQ_HOST///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-r-a-b-b-i-t-m-q_-h-o-s-t/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_RABBITMQ_PASSWORD///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-r-a-b-b-i-t-m-q_-p-a-s-s-w-o-r-d/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_RABBITMQ_PORT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-r-a-b-b-i-t-m-q_-p-o-r-t/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_RABBITMQ_USER///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-r-a-b-b-i-t-m-q_-u-s-e-r/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_REDIS_HOST///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-r-e-d-i-s_-h-o-s-t/index.html
+$dokka.location:org.pumped.io.env/EnvVariables.BB_REDIS_PORT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-workout/org.pumped.io.env/-env-variables/-b-b_-r-e-d-i-s_-p-o-r-t/index.html
+$dokka.location:org.pumped.io.env/EnvVariables///PointingToDeclaration/-workout/org.pumped.io.env/-env-variables/index.html
+$dokka.location:org.pumped.io.env/EnvVariables/default/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-variables/default.html
+$dokka.location:org.pumped.io.env/EnvVariables/entries/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-variables/entries.html
+$dokka.location:org.pumped.io.env/EnvVariables/requiresNonEmpty/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-variables/requires-non-empty.html
+$dokka.location:org.pumped.io.env/EnvVariables/type/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-variables/type.html
+$dokka.location:org.pumped.io.env/EnvVariables/valueOf/#kotlin.String/PointingToDeclaration/-workout/org.pumped.io.env/-env-variables/value-of.html
+$dokka.location:org.pumped.io.env/EnvVariables/values/#/PointingToDeclaration/-workout/org.pumped.io.env/-env-variables/values.html
+$dokka.location:org.pumped.io.secret.adapters////PointingToDeclaration/-workout/org.pumped.io.secret.adapters/index.html
+$dokka.location:org.pumped.io.secret.adapters/DotEnvAdapter///PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-dot-env-adapter/index.html
+$dokka.location:org.pumped.io.secret.adapters/DotEnvAdapter/DotEnvAdapter/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-dot-env-adapter/-dot-env-adapter.html
+$dokka.location:org.pumped.io.secret.adapters/DotEnvAdapter/get/#kotlin.String/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-dot-env-adapter/get.html
+$dokka.location:org.pumped.io.secret.adapters/DotEnvAdapter/getAll/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-dot-env-adapter/get-all.html
+$dokka.location:org.pumped.io.secret.adapters/DotEnvAdapter/getAllKeys/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-dot-env-adapter/get-all-keys.html
+$dokka.location:org.pumped.io.secret.adapters/SystemEnvAdapter///PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-system-env-adapter/index.html
+$dokka.location:org.pumped.io.secret.adapters/SystemEnvAdapter/SystemEnvAdapter/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-system-env-adapter/-system-env-adapter.html
+$dokka.location:org.pumped.io.secret.adapters/SystemEnvAdapter/get/#kotlin.String/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-system-env-adapter/get.html
+$dokka.location:org.pumped.io.secret.adapters/SystemEnvAdapter/getAll/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-system-env-adapter/get-all.html
+$dokka.location:org.pumped.io.secret.adapters/SystemEnvAdapter/getAllKeys/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-system-env-adapter/get-all-keys.html
+$dokka.location:org.pumped.io.secret.adapters/VaultAdapter///PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-vault-adapter/index.html
+$dokka.location:org.pumped.io.secret.adapters/VaultAdapter/VaultAdapter/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-vault-adapter/-vault-adapter.html
+$dokka.location:org.pumped.io.secret.adapters/VaultAdapter/get/#kotlin.String/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-vault-adapter/get.html
+$dokka.location:org.pumped.io.secret.adapters/VaultAdapter/getAll/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-vault-adapter/get-all.html
+$dokka.location:org.pumped.io.secret.adapters/VaultAdapter/getAllKeys/#/PointingToDeclaration/-workout/org.pumped.io.secret.adapters/-vault-adapter/get-all-keys.html
+$dokka.location:org.pumped.io.secret////PointingToDeclaration/-workout/org.pumped.io.secret/index.html
+$dokka.location:org.pumped.io.secret/SecretAdapter.Companion///PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/-companion/index.html
+$dokka.location:org.pumped.io.secret/SecretAdapter.Companion/getSecretAdapter/#kotlin.String/PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/-companion/get-secret-adapter.html
+$dokka.location:org.pumped.io.secret/SecretAdapter///PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/index.html
+$dokka.location:org.pumped.io.secret/SecretAdapter/get/#kotlin.String/PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/get.html
+$dokka.location:org.pumped.io.secret/SecretAdapter/get/#org.pumped.io.env.EnvVariables/PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/get.html
+$dokka.location:org.pumped.io.secret/SecretAdapter/getAll/#/PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/get-all.html
+$dokka.location:org.pumped.io.secret/SecretAdapter/getAllKeys/#/PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/get-all-keys.html
+$dokka.location:org.pumped.io.secret/SecretAdapter/validate/#/PointingToDeclaration/-workout/org.pumped.io.secret/-secret-adapter/validate.html
+$dokka.location:org.pumped.io.validation////PointingToDeclaration/-workout/org.pumped.io.validation/index.html
+$dokka.location:org.pumped.io.validation//receiveAPIRequest/io.ktor.server.application.ApplicationCall#/PointingToDeclaration/-workout/org.pumped.io.validation/receive-a-p-i-request.html
+$dokka.location:org.pumped.io////PointingToDeclaration/-workout/org.pumped.io/index.html
+$dokka.location:org.pumped.io//defaultJson/#/PointingToDeclaration/-workout/org.pumped.io/default-json.html
+$dokka.location:org.pumped.mapping////PointingToDeclaration/-workout/org.pumped.mapping/index.html
+$dokka.location:org.pumped.mapping/IModelMapper///PointingToDeclaration/-workout/org.pumped.mapping/-i-model-mapper/index.html
+$dokka.location:org.pumped.mapping/IModelMapper/toDomain/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-workout/org.pumped.mapping/-i-model-mapper/to-domain.html
+$dokka.location:org.pumped.mapping/IRouteMapper///PointingToDeclaration/-workout/org.pumped.mapping/-i-route-mapper/index.html
+$dokka.location:org.pumped.mapping/IRouteMapper/toDomain/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-workout/org.pumped.mapping/-i-route-mapper/to-domain.html
+$dokka.location:org.pumped.mapping/IRouteMapper/toResponse/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-workout/org.pumped.mapping/-i-route-mapper/to-response.html
+$dokka.location:org.pumped.routes////PointingToDeclaration/-workout/org.pumped.routes/index.html
+$dokka.location:org.pumped.routes//configureRoutes/io.ktor.server.application.Application#/PointingToDeclaration/-workout/org.pumped.routes/configure-routes.html
+$dokka.location:org.pumped.routes//statusRouting/io.ktor.server.routing.Route#/PointingToDeclaration/-workout/org.pumped.routes/status-routing.html
+$dokka.location:org.pumped.service////PointingToDeclaration/-workout/org.pumped.service/index.html
+$dokka.location:org.pumped.service/IChoreographedService///PointingToDeclaration/-workout/org.pumped.service/-i-choreographed-service/index.html
+$dokka.location:org.pumped.service/IChoreographedService/sendEvent/#org.pumped.service.IEvent/PointingToDeclaration/-workout/org.pumped.service/-i-choreographed-service/send-event.html
+$dokka.location:org.pumped.service/IEvent///PointingToDeclaration/-workout/org.pumped.service/-i-event/index.html
+$dokka.location:org.pumped.service/IEventQueue///PointingToDeclaration/-workout/org.pumped.service/-i-event-queue/index.html
+$dokka.location:org.pumped.service/IEventQueue/name/#/PointingToDeclaration/-workout/org.pumped.service/-i-event-queue/name.html
+$dokka.location:org.pumped.util////PointingToDeclaration/-workout/org.pumped.util/index.html
+$dokka.location:org.pumped.util//toUUID/kotlin.String#/PointingToDeclaration/-workout/org.pumped.util/to-u-u-i-d.html
+$dokka.location:org.pumped.util//toUUIDOrNull/kotlin.String#/PointingToDeclaration/-workout/org.pumped.util/to-u-u-i-d-or-null.html
+io.validation
+org.pumped.app
+org.pumped.common
+org.pumped.configuration
+org.pumped.configuration.database
+org.pumped.configuration.database.adapters
+org.pumped.exceptions
+org.pumped.io
+org.pumped.io.env
+org.pumped.io.secret
+org.pumped.io.secret.adapters
+org.pumped.io.validation
+org.pumped.mapping
+org.pumped.routes
+org.pumped.service
+org.pumped.util
