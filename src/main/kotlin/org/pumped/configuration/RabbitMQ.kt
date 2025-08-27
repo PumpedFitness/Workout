@@ -32,12 +32,5 @@ fun Application.configureRabbitMQ(name: String) {
                 type = "direct"
             }
         }
-        basicConsume {
-            queue = queueName
-            deliverCallback<String> {
-
-                basicAck {  }
-            }
-        }
     }
 }

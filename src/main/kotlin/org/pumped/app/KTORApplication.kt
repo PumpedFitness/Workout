@@ -1,21 +1,24 @@
 package org.pumped.app
 
 import io.ktor.server.application.Application
+import kotlinx.coroutines.runBlocking
 import org.pumped.configuration.*
 import org.pumped.routes.configureRoutes
 
 fun Application.module(config: MiniServiceConfig) {
-    configureSecrets(false,config.secretsPrefix)
+    runBlocking {
+        configureSecrets(false,config.secretsPrefix)
 
-    configureDatabases()
-    configureRabbitMQ(config.name)
+        configureDatabases()
+        configureRabbitMQ(config.name)
 
-    configureSerialization()
-    configureAdministration()
-    configureAkkurate()
-    configureRouting()
-    configureRoutes()
+        configureSerialization()
+        configureAdministration()
+        configureAkkurate()
+        configureRouting()
+        configureRoutes()
 
-    configureOpenAPI()
-    configureSwagger()
+        configureOpenAPI()
+        configureSwagger()
+    }
 }

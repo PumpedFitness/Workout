@@ -7,7 +7,7 @@ class DotEnvAdapter(prefix: String): SecretAdapter(prefix) {
     private val dotenv = dotenv()
 
     override fun get(key: String): String? {
-        if (!dotenv.entries().any { it.key == key }) return null
+        if (!dotenv.entries().any { it.key == "${prefix}_$key" }) return null
         return dotenv["${prefix}_$key"]
     }
 

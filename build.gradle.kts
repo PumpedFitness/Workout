@@ -36,7 +36,7 @@ kotlin {
 }
 
 group = "org.pumped"
-version = "1.0.0"
+version = "0.0.7"
 
 application {
     // trick shadow jar
@@ -111,7 +111,6 @@ dependencies {
     api("org.jetbrains.exposed:exposed-kotlin-datetime:$exposed_version")
 
     implementation("com.zaxxer:HikariCP:7.0.2")
-
     implementation("org.mariadb.jdbc:mariadb-java-client:3.5.4")
 
     implementation("io.github.cdimascio:dotenv-kotlin:6.5.1")
@@ -129,6 +128,8 @@ dependencies {
     api("io.github.smiley4:ktor-swagger-ui:5.2.0")
 
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+    api("net.ormr.eventbus:eventbus-core:0.2.0")
 
     api("dev.nesk.akkurate:akkurate-ktor-server:$akkurate_version")
     api("dev.nesk.akkurate:akkurate-core:$akkurate_version")

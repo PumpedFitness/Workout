@@ -40,22 +40,26 @@ abstract class SecretAdapter(val prefix: String = ""): EnvAccessor {
         val keys = getAllKeys()
 
         for (envVariable in envVariables) {
-            if (!keys.contains(envVariable.name)) {
-                error("Missing required environment variable ${envVariable.name}")
+
+            val transformedKey = "${prefix}_${envVariable.name}"
+            val key = envVariable.name
+
+            if (!keys.contains(transformedKey)) {
+                error("Missing required environment variable $transformedKey")
             }
 
-            val value = get(envVariable.name)
+            val value = get(key)
 
             if (value == null) {
-                error("Missing required environment variable ${envVariable.name}")
+                error("Missing required environment variable $transformedKey")
             }
 
             if (!envVariable.type.cast(value)) {
-                error("Failed to cast ${envVariable.name} to ${envVariable.type.cast(value)}")
+                error("Failed to cast $transformedKey to ${envVariable.type.cast(value)}")
             }
 
             if (envVariable.requiresNonEmpty && value.isEmpty()) {
-                error("Variable ${envVariable.name} requires non empty value, but a empty value has been supplied!")
+                error("Variable $transformedKey requires non empty value, but a empty value has been supplied!")
             }
         }
 
